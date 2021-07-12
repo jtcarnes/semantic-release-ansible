@@ -1,0 +1,61 @@
+{
+  "name": "semantic-release-ansible",
+  "version": "1.0.0",
+  "description": "Semantic Release plugin for ansible collections",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava -v",
+    "test:ci": "nyc ava -v",
+    "lint": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtcarnes/semantic-release-ansible.git"
+  },
+  "keywords": [
+    "semantic",
+    "release",
+    "semantic",
+    "versioning",
+    "ansible",
+    "collection",
+    "semver"
+  ],
+  "author": "jtcarnes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jtcarnes/semantic-release-ansible/issues"
+  },
+  "homepage": "https://github.com/jtcarnes/semantic-release-ansible#readme",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "xo": "^0.41.0"
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.js",
+      "index.js",
+      "cli.js"
+    ],
+    "reporter": [
+      "json",
+      "text",
+      "html"
+    ],
+    "all": true
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "rules": {
+      "unicorn/string-content": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
