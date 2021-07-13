@@ -4,10 +4,15 @@
   "description": "Semantic Release plugin for ansible collections",
   "main": "index.js",
   "scripts": {
-    "test": "nyc ava -v",
-    "test:ci": "nyc ava -v",
+    "test": "c8 ava -v",
+    "test:ci": "c8 ava -v",
     "lint": "xo"
   },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jtcarnes/semantic-release-ansible.git"
@@ -29,20 +34,28 @@
   "homepage": "https://github.com/jtcarnes/semantic-release-ansible#readme",
   "devDependencies": {
     "ava": "^3.15.0",
+    "c8": "^7.7.3",
+    "esm": "^3.2.25",
+    "mock-fs": "^5.0.0",
     "xo": "^0.41.0"
   },
-  "nyc": {
+  "c8": {
     "include": [
       "lib/**/*.js",
-      "index.js",
-      "cli.js"
+      "index.js"
     ],
     "reporter": [
       "json",
       "text",
       "html"
     ],
-    "all": true
+    "all": true,
+    "check-coverage": true
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   },
   "xo": {
     "prettier": true,
@@ -57,5 +70,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "execa": "^5.1.1",
+    "hasbin": "^1.2.3",
+    "js-yaml": "^3.14.1",
+    "lodash.isboolean": "^3.0.3",
+    "lodash.isstring": "^4.0.1",
+    "lodash.isundefined": "^3.0.1",
+    "sinon": "^11.1.1"
   }
 }
