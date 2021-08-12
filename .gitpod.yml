@@ -2,6 +2,10 @@
 tasks:
   - init: npm install # runs during prebuild
 
+github:
+  prebuilds:
+    # enable for the main/default branch (defaults to true)
+    main: true
 
 vscode:
   extensions:
