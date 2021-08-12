@@ -1,0 +1,14 @@
+
+tasks:
+  - init: npm install # runs during prebuild
+
+
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - coenraads.bracket-pair-colorizer-2
+    - wix.vscode-import-cost
+    - christian-kohler.npm-intellisense
+    - christian-kohler.path-intellisense
+    - gruntfuggly.bettercomment
+    - editorconfig.editorconfig
