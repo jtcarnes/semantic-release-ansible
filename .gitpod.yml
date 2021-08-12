@@ -1,9 +1,5 @@
 
 tasks:
-  - name: pre-commit
-    init: |
-      pip install pre-commit
-      pre-commit install --install-hooks -t pre-commit pre-push commit-msg
   - init: npm install # runs during prebuild
 
 github:
@@ -20,3 +16,5 @@ vscode:
     - christian-kohler.path-intellisense
     - gruntfuggly.bettercomment
     - editorconfig.editorconfig
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
