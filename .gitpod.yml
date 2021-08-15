@@ -1,10 +1,5 @@
-image:
-  file: .gitpod.dockerfile
 
 tasks:
-  - name: pre-commit setup
-    init: |
-      pre-commit install --install-hooks -t {pre-commit, pre-push, commit-msg}
   - init: npm install # runs during prebuild
 
 github:
